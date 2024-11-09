@@ -51,7 +51,21 @@ Steps:
     Call get_slot_machine_spin to generate a spin.
     Print the result with print_slot_machine.
 ----------------------------------------------------------------------------------------------
-This code structure handles user inputs, displays a slot machine spin result, and will eventually calculate winnings (if added). The 4x4 grid format and symbol probabilities make it more complex and engaging. To expand it, you could:
-    Add win/loss conditions based on symbol alignments.
-    Implement dynamic symbols for higher or lower odds.
-    Track the balance through multiple spins.
+
+    In the slot machine game, the idea is that for you to win, the same symbol (like "A", "B", "C", "D") must appear in the same column for the number of lines you bet on. Here's a summary:
+
+    Matching Symbols in a Column: The game checks if all symbols in a specific column are the same for the given row. For instance, if the first column has the symbols ["A", "A", "A", "A"], this is a match for all 4 rows, meaning it is a winning column.
+
+    Matching Symbols Across the Chosen Number of Lines: The number of lines you choose to bet on determines how many rows you are betting across. The game will check if the symbols in the same row across all the columns are the same.
+
+For example:
+
+    If you bet on 2 lines:
+        The first line (row 1) will check if symbols in each column of that row are the same.
+        The second line (row 2) will check for the same condition.
+    If the symbols match on those lines, you win, and your winnings are based on the symbol's value.
+
+To clarify the winning condition:
+
+    You win if you have matching symbols across all columns for the chosen line.
+    If you have matching symbols in a column, it counts as a win for the lines where the symbols align.
